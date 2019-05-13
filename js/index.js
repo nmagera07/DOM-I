@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM <br> Is <br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -29,7 +29,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street <br> Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -49,7 +49,7 @@ let logo3 = document.getElementById("middle-img");
 logo3.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 const header = document.querySelector('header')
-header.style.backgroundColor = "PaleGreen"
+header.style.backgroundColor = "Gainsboro"
 header.style.borderBottomLeftRadius = "10px"
 header.style.borderBottomRightRadius = "10px"
 const nav = document.querySelectorAll('a')
@@ -67,12 +67,14 @@ nav[3].textContent = siteContent['nav']['nav-item-4']
 nav[4].textContent = siteContent['nav']['nav-item-5']
 nav[5].textContent = siteContent['nav']['nav-item-6']
 
-nav[0].style.color = "green";
-nav[1].style.color = "green";
-nav[2].style.color = "green";
-nav[3].style.color = "green";
-nav[4].style.color = "green";
-nav[5].style.color = "green";
+nav.forEach(x => x.style.color = 'forestGreen')
+
+// nav[0].style.color = "green";
+// nav[1].style.color = "green";
+// nav[2].style.color = "green";
+// nav[3].style.color = "green";
+// nav[4].style.color = "green";
+// nav[5].style.color = "green";
 
 const headerEl = document.querySelector('nav')
 const newItem1 = document.createElement('a');
@@ -85,8 +87,8 @@ headerEl.appendChild(newItem2)
 headerEl.prepend(newItem1)
 
 const ctaText = document.querySelector('h1');
-// ctaText.textContent = "DOM Is Awesome"
-ctaText.textContent = siteContent['cta']['h1']
+// ctaText.textContent = "DOM \n Is \n Awesome"
+ctaText.innerHTML = siteContent['cta']['h1']
 ctaText.style.color = "forestGreen"
 const ctaButton = document.querySelector('button');
 // ctaButton.textContent = 'Get Started'
@@ -136,7 +138,7 @@ const contactPara = document.querySelectorAll('.contact p')
 // contactPara[0].textContent = "123 Way 456 Street Somewhere, USA"
 // contactPara[1].textContent = "1 (888) 888-8888"
 // contactPara[2].textContent = "sales@greatidea.io"
-contactPara[0].textContent = siteContent['contact']['address']
+contactPara[0].innerHTML = siteContent['contact']['address']
 contactPara[1].textContent = siteContent['contact']['phone']
 contactPara[2].textContent = siteContent['contact']['email']
 
