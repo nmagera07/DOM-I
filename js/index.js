@@ -88,12 +88,15 @@ ctaButton.textContent = siteContent['cta']['button'];
 ctaButton.style.backgroundColor = "gray"
 ctaButton.style.color = "white"
 ctaButton.style.borderRadius = "5px"
+ctaButton.addEventListener('click', (event) => {event.target.style.backgroundColor = 'white'; })
+ctaButton.addEventListener('click', (event) => {event.target.style.color = 'black'; })
 
 const topContentTitle = document.querySelectorAll('.top-content h4')
 // topContentTitle[0].textContent = "Features"
 topContentTitle[0].textContent = siteContent['main-content']['features-h4']
 // topContentTitle[1].textContent = "About"
 topContentTitle[1].textContent = siteContent['main-content']['about-h4']
+topContentTitle.forEach(x => x.style.color = 'forestGreen')
 
 const topContentPara = document.querySelectorAll('.top-content p')
 // topContentPara[0].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
@@ -108,6 +111,7 @@ const bottomContentTitle = document.querySelectorAll('.bottom-content h4')
 bottomContentTitle[0].textContent = siteContent['main-content']['services-h4']
 bottomContentTitle[1].textContent = siteContent['main-content']['product-h4']
 bottomContentTitle[2].textContent = siteContent['main-content']['vision-h4']
+bottomContentTitle.forEach(x => x.style.color = 'forestGreen')
 
 const bottomContentPara = document.querySelectorAll('.bottom-content p')
 // bottomContentPara[0].textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
@@ -117,9 +121,10 @@ bottomContentPara[0].textContent = siteContent['main-content']['services-content
 bottomContentPara[1].textContent = siteContent['main-content']['product-content']
 bottomContentPara[2].textContent = siteContent['main-content']['vision-content']
 
-const contactTitle = document.querySelectorAll('.contact h4');
+const contactTitle = document.querySelector('.contact h4');
 // contactTitle[0].textContent = "Contact";
-contactTitle[0].textContent = siteContent['contact']['contact-h4']
+contactTitle.textContent = siteContent['contact']['contact-h4']
+contactTitle.style.color = 'forestGreen'
 
 const contactPara = document.querySelectorAll('.contact p')
 // contactPara[0].textContent = "123 Way 456 Street Somewhere, USA"
