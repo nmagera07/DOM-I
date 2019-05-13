@@ -48,6 +48,12 @@ logo2.setAttribute('src', siteContent["cta"]["img-src"])
 let logo3 = document.getElementById("middle-img");
 logo3.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
+const header = document.querySelector('header')
+header.style.backgroundColor = "YellowGreen"
+header.style.borderBottomLeftRadius = "10px"
+header.style.borderBottomRightRadius = "10px"
+// header.style.borderTopLeftRadius = "10px"
+// header.style.borderTopRightRadius = "10px"
 const nav = document.querySelectorAll('a')
 // nav[0].textContent = "Services"
 // nav[1].textContent = "Product"
@@ -75,6 +81,8 @@ const newItem1 = document.createElement('a');
 const newItem2 = document.createElement('a');
 newItem1.textContent = "First Item"
 newItem2.textContent = "Last Item"
+newItem1.style.color = "forestGreen"
+newItem2.style.color = "forestGreen"
 headerEl.appendChild(newItem2)
 headerEl.prepend(newItem1)
 
